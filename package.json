@@ -1,0 +1,40 @@
+{
+  "name": "backyard-2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.3",
+    "@fortawesome/fontawesome-free-regular": "^5.0.6",
+    "@fortawesome/fontawesome-free-solid": "^5.0.6",
+    "@fortawesome/react-fontawesome": "^0.0.17",
+    "babel-plugin-relay": "^1.4.1",
+    "codemirror": "^5.34.0",
+    "cors": "^2.8.4",
+    "create-react-class": "^15.6.3",
+    "jwt-decode": "^2.2.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-codemirror2": "^4.0.0",
+    "react-cookie": "^2.1.2",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-markdown": "^3.1.4",
+    "react-relay": "^1.4.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0",
+    "react-typography": "^0.16.13",
+    "typography": "^0.16.6"
+  },
+  "scripts": {
+    "start": "node ./setup && react-scripts start",
+    "build": "node ./setup && react-scripts build",
+    "test": "node ./setup && react-scripts test --env=jsdom",
+    "eject": "node ./setup && react-scripts eject",
+    "relay": "relay-compiler --src ./src --schema schema.graphql",
+    "graphql": "graphql"
+  },
+  "devDependencies": {
+    "graphql-cli": "^2.13.0",
+    "relay-compiler": "^1.4.1"
+  }
+}

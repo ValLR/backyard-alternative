@@ -1,0 +1,141 @@
+a {
+	color:black;
+}
+.project-page {
+	height:100%;
+}
+
+/*índice de Proyectos*/
+
+.projectIndex {
+	display:flex;
+	flex-direction: column;
+	border-top:2px solid #efefef;
+	padding:2% 10%;
+}
+
+.wrapper {
+	position: relative;
+}
+
+svg#search {
+	position: absolute;
+	top: 13px;
+	left: 24px;
+	color: #B2B2B2;
+}
+
+input {
+	font-size:18px;
+	width:100%;
+	padding: 0.6% 3%;
+}
+
+input::placeholder {
+	color: #B2B2B2;
+	font-weight: normal;
+}
+
+.projects-list {
+	padding: 3%;
+	width:25%;
+	font-size:18px;
+}
+
+.link-services {
+	display:flex;
+	justify-content: space-between;
+}
+
+.index-links {
+	text-align: center;
+	display:flex;
+	padding: 0 5%;
+}
+
+/*Ficha Proyecto*/
+
+.project-container {
+	padding:2% 10%;
+}
+
+hr {
+	height: 2px;
+    border: 0;
+    border-top: 1px solid #14A7E0;
+    margin: 1em 0;
+    padding: 0;
+    width:100%;
+}
+
+/*Services section*/
+
+.services {
+	margin-top: 3%;
+}
+
+.categories {
+	font-weight: bold;
+}
+
+.code-row {
+	display: flex;
+	flex-direction: row;
+	padding:0 0 2% 0;
+}
+
+.code-container {
+	display:flex;
+	flex-direction: row;
+	width:100%;
+	margin-left: 3%;
+}
+
+a.access {
+	margin-left: 2%;
+}
+
+.git-container {
+	display:flex;
+	flex-direction:row;
+	padding:0 2% 0 0;
+	width:15%;
+}
+
+p.access {
+	margin-left:3%;
+}
+
+.resources-row {
+	display:flex;
+	flex-direction: row;
+}
+
+.icon-container {
+	display:flex;
+	flex-direction: row;
+	margin-left: 2.4%;
+	width:100%;
+}
+
+.service-container {
+	display:flex;
+	flex-direction:row;
+	padding:0 2% 0 0;
+	width:6%;
+}
+
+p.service-name {
+	margin-left:5%;
+}
+
+/*Description section*/
+
+.description {
+	padding:2% 2% 2% 0;
+	text-align: justify;
+}
+
+a.docs {
+	font-weight: bold;
+}

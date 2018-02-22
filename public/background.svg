@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Capa_1"
+   data-name="Capa 1"
+   viewBox="0 0 3840 5000"
+   version="1.1"
+   sodipodi:docname="background.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1148"
+     inkscape:window-height="759"
+     id="namedview15"
+     showgrid="false"
+     inkscape:zoom="0.0472"
+     inkscape:cx="1920"
+     inkscape:cy="2500"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Capa_1" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#8ec043;}.cls-2{fill:#07a6d8;}.cls-3{fill:#eb5e27;}</style>
+  </defs>
+  <title
+     id="title6">Fondo_páginaweb</title>
+  <polygon
+     id="verdearriba"
+     class="cls-1"
+     points="0,650.69 1000.95,0 0,0 "
+     transform="matrix(-1,0,0,1,3840,0)"
+     style="fill:#8ec043" />
+  <polygon
+     id="azularriba"
+     class="cls-2"
+     points="0,831.93 0,1180.58 1788.55,0 1260.35,0 "
+     transform="matrix(-1,0,0,1,3840,0)"
+     style="fill:#07a6d8" />
+  <polygon
+     id="azulabajo"
+     class="cls-2"
+     points="3840,4240.32 3840,3876.01 0,1358.43 0,1707.53 "
+     transform="matrix(-1,0,0,1,3840,0)"
+     style="fill:#07a6d8" />
+  <polygon
+     id="rojoarriba"
+     class="cls-3"
+     points="0,1336.83 0,1499.96 2267.45,0 2020.84,0 "
+     transform="matrix(-1,0,0,1,3840,0)"
+     style="fill:#eb5e27" />
+  <polygon
+     id="rojoabajo"
+     class="cls-3"
+     points="0,1039.49 0,1201.3 3840,3730.34 3840,3576.49 "
+     transform="matrix(-1,0,0,1,3840,0)"
+     style="fill:#eb5e27" />
+  <polygon
+     id="verdeabajo"
+     class="cls-1"
+     points="3744.81,5000 3840,5000 3840,4419.43 0,1891.94 0,2578.8 "
+     transform="matrix(-1,0,0,1,3840,0)"
+     style="fill:#8ec043" />
+</svg>

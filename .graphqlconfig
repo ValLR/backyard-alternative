@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "backyard": {
+      "schemaPath": "schema.json",
+      "extensions": {
+        "endpoints": {
+          "dev": {
+            "url": "https://api.graph.cool/relay/v1/cjcytklb606mb0155ja2v2uce",
+            "subscription": "wss://subscriptions.graph.cool/v1/cjcytklb606mb0155ja2v2uce"
+          }
+        }
+      }
+    }
+  }
+}

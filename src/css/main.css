@@ -1,0 +1,142 @@
+/*
+@import url('https://fonts.googleapis.com/css?family=Adamina|Bitter|Frank+Ruhl+Libre|Lusitana|Martel:200,300,400,600,700,800,900|Martel+Sans:200,300,400,600,700,800,900|PT+Serif|Poly|Quattrocento');
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Martel:200,300,400,600,700,800,900');
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Hind', sans-serif;
+  color: #333;
+  min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p a {
+    border-bottom: 2px solid #eee;
+}
+
+p a:hover,
+ul a:hover {
+    color: black;
+    background: #d2ebf5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Hind', sans-serif;
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-weight: 800;
+  line-height: 1em;
+}
+
+h3 {
+  color: #666;
+  font-weight: 600;
+}
+
+
+p {
+    margin: 0 0 1.5em;
+    line-height: 1.5em;
+}
+
+body, .App, #root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.btn,
+em > a {
+  font-family: 'Hind', sans-serif;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  background: #eee;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.card {
+
+}
+
+blockquote {
+  color: #999;
+  margin: 0 2em 1em;
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+  border: 2px solid #efefef;
+}
+
+.notice {
+  /*background: #d2ebf5;*/
+  /*border: 1px solid #00a6d7;*/
+  padding: 1em 3em;
+  color: #00a6d7;
+}
+
+.notice:before {
+  content: "A tener en cuenta...";
+  display: block;
+  color: #00a6d7;
+  font-style: italic;
+  font-weight: 800;
+  margin-left: -1em;
+}
+
+.important {
+  padding: 1em 3em;
+  color: #f25c22;
+
+}
+
+.important:before {
+  content: "Importante";
+  display: block;
+  color: #f25c22;
+  font-style: italic;
+  font-weight: 800;
+  margin-left: -1em;
+}
+
+a.feedback {
+  position: fixed;
+  left: 0;
+  bottom: 4em;
+  background: #00a6d7;
+  color: white;
+  padding: 0.8em 0.5em;
+  writing-mode: vertical-lr;
+}
+
+a.feedback:hover {
+  background-color: #d2ebf5;
+  color: #00a6d7;
+}

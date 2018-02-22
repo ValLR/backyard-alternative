@@ -1,0 +1,366 @@
+type Article implements Node {
+  articleId: ID!
+  content: String
+  sectionId: Int
+  sections: Section
+
+  # The ID of the object.
+  id: ID!
+}
+
+type ArticleConnection {
+  pageInfo: PageInfo!
+  edges: [ArticleEdge]!
+}
+
+type ArticleEdge {
+  # The item at the end of the edge
+  node: Article
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input ArticleInput {
+  id: Int
+  content: String
+}
+
+type Bitacora implements Node {
+  bitacoraId: ID!
+  lastUpdate: DateTime
+  memberId: Int
+  storiesSnapshots(before: String, after: String, first: Int, last: Int): StorySnapshotConnection
+  member: Member
+  bitacoras: Member
+
+  # The ID of the object.
+  id: ID!
+}
+
+type BitacoraConnection {
+  pageInfo: PageInfo!
+  edges: [BitacoraEdge]!
+}
+
+type BitacoraEdge {
+  # The item at the end of the edge
+  node: Bitacora
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# The `DateTime` scalar type represents a DateTime
+# value as specified by
+# [iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+scalar DateTime
+
+type Guide implements Node {
+  guideId: ID!
+  name: String
+  title: String
+  sections(before: String, after: String, first: Int, last: Int): SectionConnection
+
+  # The ID of the object.
+  id: ID!
+}
+
+type GuideConnection {
+  pageInfo: PageInfo!
+  edges: [GuideEdge]!
+}
+
+type GuideEdge {
+  # The item at the end of the edge
+  node: Guide
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# JSON String
+scalar JSONString
+
+type Member implements Node {
+  memberId: ID!
+  name: String
+  team(before: String, after: String, first: Int, last: Int): TeamConnection
+  bitacoras(before: String, after: String, first: Int, last: Int): BitacoraConnection
+
+  # The ID of the object.
+  id: ID!
+}
+
+type MemberConnection {
+  pageInfo: PageInfo!
+  edges: [MemberEdge]!
+}
+
+type MemberEdge {
+  # The item at the end of the edge
+  node: Member
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# Mutation querys permited by graphQL
+type Mutation {
+  createProject(id: Int, slug: String, canonicalName: String, description: String, resources: [ResourceInput]): Project
+  createTeam(name: String!, projects: [ProjectInput]): Team
+  createResource(rtype: String, name: String, url: String): Resource
+  createMember(name: String!): Member
+  createBitacora(storiesSnapshots: [StoryInput]): Bitacora
+  createStorySnapshot(storyId: Int!, labels: [String], name: String!, currentState: String!, estimate: Int, custom: Boolean): StorySnapshot
+  createGuide(id: Int, name: String, title: String, sections: [SectionInput]): Guide
+  updateResource(resourceId: Int!, rtype: String, name: String, url: String): Resource
+  updateStory(storyId: Int!, currentState: String): StorySnapshot
+}
+
+# An object with an ID
+interface Node {
+  # The ID of the object.
+  id: ID!
+}
+
+type PageInfo {
+  # When paginating forwards, are there more items?
+  hasNextPage: Boolean!
+
+  # When paginating backwards, are there more items?
+  hasPreviousPage: Boolean!
+
+  # When paginating backwards, the cursor to continue.
+  startCursor: String
+
+  # When paginating forwards, the cursor to continue.
+  endCursor: String
+}
+
+type Project implements Node {
+  projectId: ID!
+  slug: String
+  canonicalName: String
+  description: String
+  teamId: Int
+  resources(before: String, after: String, first: Int, last: Int): ResourceConnection
+  team: Team
+
+  # The ID of the object.
+  id: ID!
+  stories: [Story]
+}
+
+type ProjectConnection {
+  pageInfo: PageInfo!
+  edges: [ProjectEdge]!
+}
+
+type ProjectEdge {
+  # The item at the end of the edge
+  node: Project
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input ProjectInput {
+  id: Int
+  slug: String
+  canonicalName: String
+  description: String
+  resources: [ResourceInput]
+}
+
+# GraphQl Base query
+type Query {
+  members(memberId: Int, name: String, before: String, after: String, first: Int, last: Int): MemberConnection
+  projects(projectId: Int, teamId: Int, canonicalName: String, slug: String, before: String, after: String, first: Int, last: Int): ProjectConnection
+  guides(before: String, after: String, first: Int, last: Int): GuideConnection
+  bitacoras(memberId: Int, before: String, after: String, first: Int, last: Int): BitacoraConnection
+
+  # The ID of the object
+  node(id: ID!): Node
+
+  # The ID of the object
+  story(id: ID!): Story
+  stories(memberId: Int, before: String, after: String, first: Int, last: Int): StoryConnection
+  repositories(before: String, after: String, first: Int, last: Int): RepositoryConnection
+}
+
+type Repository implements Node {
+  # The ID of the object.
+  id: ID!
+  repoId: Int
+  name: String
+  url: String
+}
+
+type RepositoryConnection {
+  pageInfo: PageInfo!
+  edges: [RepositoryEdge]!
+  extra: String
+}
+
+type RepositoryEdge {
+  # The item at the end of the edge
+  node: Repository
+
+  # A cursor for use in pagination
+  cursor: String!
+  other: String
+}
+
+type Resource implements Node {
+  resourceId: ID!
+  rtype: String
+  name: String
+  url: String
+  projectId: Int
+  projects: Project
+
+  # The ID of the object.
+  id: ID!
+}
+
+type ResourceConnection {
+  pageInfo: PageInfo!
+  edges: [ResourceEdge]!
+}
+
+type ResourceEdge {
+  # The item at the end of the edge
+  node: Resource
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input ResourceInput {
+  rtype: String
+  name: String
+  url: String
+}
+
+type Section implements Node {
+  sectionId: ID!
+  name: String
+  title: String
+  guideId: Int
+  articles(before: String, after: String, first: Int, last: Int): ArticleConnection
+  guides: Guide
+
+  # The ID of the object.
+  id: ID!
+}
+
+type SectionConnection {
+  pageInfo: PageInfo!
+  edges: [SectionEdge]!
+}
+
+type SectionEdge {
+  # The item at the end of the edge
+  node: Section
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input SectionInput {
+  id: Int
+  name: String
+  title: String
+  articles: [ArticleInput]
+}
+
+type Story implements Node {
+  # The ID of the object.
+  id: ID!
+  storyId: ID
+  owner: Int
+  name: String
+  labels: [String]
+  currentState: String
+  estimate: Int
+  url: String
+  custom: Boolean
+  projectId: Int
+  projectName: String
+}
+
+type StoryConnection {
+  pageInfo: PageInfo!
+  edges: [StoryEdge]!
+  extra: String
+}
+
+type StoryEdge {
+  # The item at the end of the edge
+  node: Story
+
+  # A cursor for use in pagination
+  cursor: String!
+  other: String
+}
+
+input StoryInput {
+  labels: [String]
+  name: String!
+  currentState: String!
+  estimate: Int
+  custom: Boolean
+}
+
+type StorySnapshot implements Node {
+  storySnapshotId: ID!
+  labels: JSONString
+  name: String
+  currentState: String
+  estimate: Int
+  custom: Boolean
+  bitacoraId: Int
+  bitacora: Bitacora
+  storiesSnapshots: Bitacora
+
+  # The ID of the object.
+  id: ID!
+}
+
+type StorySnapshotConnection {
+  pageInfo: PageInfo!
+  edges: [StorySnapshotEdge]!
+}
+
+type StorySnapshotEdge {
+  # The item at the end of the edge
+  node: StorySnapshot
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type Team implements Node {
+  teamId: ID!
+  name: String
+  projects(before: String, after: String, first: Int, last: Int): ProjectConnection
+  members(before: String, after: String, first: Int, last: Int): MemberConnection
+
+  # The ID of the object.
+  id: ID!
+}
+
+type TeamConnection {
+  pageInfo: PageInfo!
+  edges: [TeamEdge]!
+}
+
+type TeamEdge {
+  # The item at the end of the edge
+  node: Team
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+

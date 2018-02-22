@@ -1,0 +1,10 @@
+- service: backyard
+  command: build
+
+- service: awsdeployment
+  command: aws s3 cp --recursive /build s3://backyard.unholster.com/master
+  tag: master
+
+- service: awsdeployment
+  command: aws s3 cp --recursive /build s3://backyard.unholster.com/develop
+  tag: develop

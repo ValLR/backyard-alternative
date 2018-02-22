@@ -1,0 +1,41 @@
+.home {
+    flex: 1;
+    background: url("/background.svg");
+    background-size: cover;
+}
+
+
+.home .card {
+    background: white;
+    border: 1px solid #efefef;
+    padding: 1.5em;
+}
+
+.home .column {
+    flex: none;
+    width: 32%;
+}
+
+.home .content {
+    position: absolute;
+    top: 350px;
+    margin: 0 70px;
+    justify-content: space-between;
+}
+
+.home .masthead {
+    position: absolute;
+    top: 150px;
+    left: 70px;
+    max-width: 600px;
+}
+
+.home .masthead p {
+    font-size: 1em;
+    font-family: Martel;
+    color: #999;
+}
+
+.home h1 {
+    font-size: 2.5em;
+}
