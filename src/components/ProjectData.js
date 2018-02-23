@@ -5,8 +5,8 @@ import {
   	Link
 } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
+import ProjectView from './ProjectView'
 import ConnectedServices from './ConnectedServices.js'
-import ProjectView from './ProjectView.js'
 import 'css/projectData.css';
 import 'css/main.css';
 
