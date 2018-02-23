@@ -22,7 +22,7 @@ class ProjectView extends Component{
 				</Row>
 				<section id={slug} className='services'>
 					<Row className='code-row'>
-						<Col sm={2} md={2} lg={2} className='text-left categories'>
+						<Col sm={2} md={2} lg={1} className='text-left categories'>
 							<p className='categories'>Código</p>
 						</Col>
 						<Col sm={10} md={10} lg={10} className='code-container'>
@@ -30,7 +30,7 @@ class ProjectView extends Component{
 						</Col>
 					</Row>
 					<Row className='resources-row'>
-						<Col sm={2} md={2} lg={2} className='text-left categories'>
+						<Col sm={2} md={2} lg={1} className='text-left categories'>
 							<p className='categories'>Recursos</p>
 						</Col>
 						<Col sm={10} md={10} lg={10} className='icon-container'>
