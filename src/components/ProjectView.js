@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Codigo from './Codigo.js';
 import Recursos from './Recursos.js';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import 'css/projectPage.css';
 
 class ProjectView extends Component{
