@@ -65,7 +65,6 @@ class ProjectData extends Component {
 								    </Row>
 								)}
 							</Col>
-
 						</Row>
 					</Grid>		
 					: allProjects.map((project) =>
