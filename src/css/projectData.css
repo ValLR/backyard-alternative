@@ -1,59 +1,130 @@
-a {
+/*Project-Data*/
+* {
 	color:black;
 }
-.project-page {
-	height:100%;
+
+.project-data {
+	padding: 2% 5%;
 }
 
-/*índice de Proyectos*/
-
-.projectIndex {
-	display:flex;
-	flex-direction: column;
-	border-top:2px solid #efefef;
-	padding:2% 10%;
-}
-
+/*Input*/
+ 
 .wrapper {
 	position: relative;
 }
 
-svg#search {
+i {
 	position: absolute;
-	top: 13px;
+	top: 10px;
 	left: 24px;
 	color: #B2B2B2;
 }
 
 input {
+	border: 1px solid #B2B2B2;
 	font-size:18px;
+	height: 100%;
 	width:100%;
-	padding: 0.6% 3%;
+	padding: 1% 4%;
 }
 
 input::placeholder {
 	color: #B2B2B2;
 	font-weight: normal;
+	font-size: 120%;
 }
 
-.projects-list {
-	padding: 3%;
-	width:25%;
-	font-size:18px;
+/*Lista de proyectos*/
+
+.project-index {
+	margin-top: 3%;
+}
+
+.project-row {
+	padding: 5px 0;
+}
+
+.link-container {
+	padding-top:1%;
 }
 
 .link-services {
-	display:flex;
-	justify-content: space-between;
+	font-size: 17px;
 }
 
-.index-links {
-	text-align: center;
-	display:flex;
-	padding: 0 5%;
+/*Icon*/
+
+a {
+	text-decoration: none;
+	color:black;
 }
 
-/*Ficha Proyecto*/
+a.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+img.disabled {
+	opacity:0.5;
+}
+
+a.preview {
+   pointer-events: none;
+   cursor: default;
+   padding: 0 1%;
+}
+
+/*Ficha de proyecto*/
+
+hr#separator {
+	border-top: 1px solid #00A6D7;
+}
+
+.services {
+	padding: 2%;
+	font-size: 1.25em;
+}
+
+.code-row {
+	padding: 2% 0;
+}
+
+p.categories {
+	padding-top: 5%;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+p.access {
+	font-weight: bold;
+	padding-top:2%;
+}
+
+
+p.disabled {
+	color: #808594;
+}
+
+.description {
+	padding: 2%;
+	font-size: 130%;
+	text-align: justify;
+	font-family: 'Martel';
+    font-size: 1.25em;
+    font-weight: 100;
+}
+
+.docs {
+	padding: 0 3%;
+	font-weight: bold;
+	font-size: 1.25em;
+}
+/*.services {
+	padding: 3% 4%;
+}*/
+
+
+/*Ficha Proyecto
 
 .project-container {
 	padding:2% 10%;
@@ -68,7 +139,7 @@ hr {
     width:100%;
 }
 
-/*Services section*/
+/*Services section*
 
 .services {
 	margin-top: 3%;
@@ -129,7 +200,7 @@ p.service-name {
 	margin-left:5%;
 }
 
-/*Description section*/
+/*Description section
 
 .description {
 	padding:2% 2% 2% 0;
@@ -138,4 +209,4 @@ p.service-name {
 
 a.docs {
 	font-weight: bold;
-}
+} */

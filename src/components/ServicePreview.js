@@ -28,7 +28,7 @@ class ServicePreview extends Component {
 
 		return(
 			this.state.connected ?
-			<Icon title={service} url={service} service={service} width="25" height="26" status='preview' />
+			<Icon title={service} url={service} service={service} width="29" height="30" status='preview' />
 			: ''	
 		)
 	}

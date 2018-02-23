@@ -5,7 +5,7 @@ import pivIcon from 'images/pivotal.png';
 import codeIcon from 'images/codeship.png';
 import paperIcon from 'images/papertrail.png';
 import sentryIcon from 'images/sentry.png';
-import 'css/icon.css';
+
 
 class Icon extends Component {
 
@@ -14,7 +14,7 @@ class Icon extends Component {
     	const mode = this.props.status;
     
     	if (service === "github") {
-      		return( 
+      		return(
         		<a href={url} title={title} className={mode}> 
           			<img src={gitIcon} alt={service} className={status} width={width} height={height} />
         		</a>

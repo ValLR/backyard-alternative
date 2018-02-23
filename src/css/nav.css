@@ -2,7 +2,7 @@
     list-style: none;
     font-size: 1.3em;
 
-    display: flex;
+    display: flex !important;
     margin: 0;
     padding: 12px 0;
 }
@@ -22,12 +22,12 @@
 
 .nav li {
     padding: 0 10px;
-    display: flex;
+    display: flex !important;
     align-items: flex-end;
 }
 
 .nav li a {
-    display: flex;
+    display: flex !important;
     align-items: flex-end;
     padding: 0 10px;
 }

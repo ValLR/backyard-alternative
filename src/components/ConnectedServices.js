@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Grid, Row, Col } from 'react-bootstrap';
 import 'css/projectData.css';
 import ServicePreview from './ServicePreview.js';
 
@@ -14,11 +15,11 @@ class ConnectedServices extends Component {
 		)
 
 		return(
-			<div className='index-links'>
+			<Row className='index-links'>
 				{available_services.map((service, index) =>
-					<ServicePreview key={index} data={connectedServices} service={service} />
+					<ServicePreview key={index} data={connectedServices} service={service} className='icons' />
 				)}
-			</div>
+			</Row>
 		)
 	}
 }

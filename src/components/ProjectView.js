@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Codigo from './Codigo.js';
 import Recursos from './Recursos.js';
+import { Grid, Row, Col } from 'react-bootstrap';
 import 'css/projectPage.css';
 
 class ProjectView extends Component{
@@ -14,22 +15,28 @@ class ProjectView extends Component{
 		);
 
 		return(
-			<div className='project-container'>
-				<h1>{title}</h1>
-				<hr/>
+			<Row className='project-container'>
+				<Row>
+					<h1>{title}</h1>
+					<hr id='separator'/>
+				</Row>
 				<section id={slug} className='services'>
-					<div className='code-row'>
-						<div className='categories'>Código</div>
-						<div className='code-container'>
-							<Codigo services={associated_services} />
-						</div>
-					</div>
-					<div className='resources-row'>
-						<div className='categories'>Recursos</div>
-						<div className='icon-container'>
+					<Row className='code-row'>
+						<Col sm={2} md={2} lg={2} className='text-left categories'>
+							<p className='categories'>Código</p>
+						</Col>
+						<Col sm={10} md={10} lg={10} className='code-container'>
+								<Codigo services={associated_services} />
+						</Col>
+					</Row>
+					<Row className='resources-row'>
+						<Col sm={2} md={2} lg={2} className='text-left categories'>
+							<p className='categories'>Recursos</p>
+						</Col>
+						<Col sm={10} md={10} lg={10} className='icon-container'>
 							<Recursos services={associated_services} />
-						</div>
-					</div>
+						</Col>
+					</Row>
 				</section>
 				<section className='description'>
 					{description === '' ?
@@ -39,7 +46,7 @@ class ProjectView extends Component{
 					: <p>{description}</p>}
 				</section>
 				<a className='docs' href=''>Ir a Documentación</a>
-			</div>
+			</Row>
 
     )}
 }

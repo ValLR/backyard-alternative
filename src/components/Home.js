@@ -13,7 +13,7 @@ export default () =>
             </p>
         </div>
 
-        <div className="content container">
+        <div className="content container-flex">
             <div className="column">
                 <div className="card">
                     <h3>Backyard</h3>

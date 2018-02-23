@@ -1,33 +1,16 @@
+body {
+	font-family: 'Hind', sans-serif !important;
+	color: #333;
+}
+
 a {
-	text-decoration: none;
-	color:black;
+	color: black !important;
 }
 
-a.disabled {
-   pointer-events: none;
-   cursor: default;
+hr {
+	margin: 0 !important;
 }
 
-img.disabled {
-	opacity:0.5;
-}
-
-a.preview {
-   pointer-events: none;
-   cursor: default;
-}
-
-
-.container-proyectos {
-	display: flex;
-	flex-direction:column;
-}
-
-.title-container {
-	text-align: center;
-}
-
-.services-container {
-	display:flex;
-	justify-content: space-around;
+ul.nav {
+	padding: 0 !important;
 }

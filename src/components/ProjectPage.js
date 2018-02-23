@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { graphql, QueryRenderer } from 'react-relay'
 import environment from 'environment.js'
 import ProjectData from './ProjectData.js'
+import Navbar from './Navbar.js';
 import 'css/projectPage.css'
 
 const ProjectPageQuery = graphql`
@@ -15,6 +16,9 @@ class ProjectPage extends Component {
   render() {
 
     return (
+      <div className='projectPage'>
+        <Navbar />
+        <hr />
       	<QueryRenderer
         	environment={environment}
         	query={ProjectPageQuery}
@@ -27,7 +31,9 @@ class ProjectPage extends Component {
         		return <div>Loading</div>
         	}}
       	/>
+    </div>
     )}
+
 }
 
 export default ProjectPage

@@ -8,7 +8,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Hind', sans-serif;
+  font-family: 'Hind', sans-serif !important;
   color: #333;
   min-height: 100vh;
 }
@@ -62,7 +62,7 @@ em > a {
   font-style: normal;
 }
 
-.container {
+.container-flex {
   display: flex;
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Grid, Row, Col } from 'react-bootstrap';
 import Icon from './Icon.js'
 import 'css/projectPage.css';
 
@@ -31,17 +32,21 @@ class Service extends Component {
 			this.state.connected ?
 			this.props.services.map((service, index) =>
 				service.rtype === resource ?
-				<div key={index} className="service-container">
-					<Icon title={service.name} url={service.url} service={service.rtype} width='30' height='30' status='access'/>
-					<p className="service-name">{this.props.resource}</p>
-				</div>
+				<Col sm={2} md={2} lg={2} key={index} className="service-container">
+					<Row className='text-center'>
+						<Icon title={service.name} url={service.url} service={service.rtype} width='33' height='33' status='access'/>
+						<p className="service-name">{this.props.resource}</p>
+					</Row>
+				</Col>
 				: ''
 			)
 			: 
-			<div className="service-container"> 
-				<Icon title={resource} url={resource} service={resource} width='30' height='30' status='disabled'/>
-				<p className="service-name">{this.props.resource}</p>
-			</div>
+			<Col sm={2} md={2} lg={2} className="service-container">
+				<Row className='text-center'>
+					<Icon title={resource} url={resource} service={resource} width='33' height='33' status='disabled'/>
+					<p className="service-name disabled">{this.props.resource}</p>
+				</Row>
+			</Col>
 		)
 	}
 }
